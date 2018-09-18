@@ -47,7 +47,8 @@
     margin: 20px 0px;
 }
 
-input {
+/* text input fields */
+.t {
     width: 100%;
     padding: 12px 0px;
     margin: 8px 0px;
@@ -55,6 +56,20 @@ input {
     border: none;
     border-bottom: 2px solid rgb(100, 100, 100);
 }
-input:focus {
+.t:focus {
     outline: none;
+}
+
+.color-wheel {
+    width: 25px;
+    height: 25px;
+    -webkit-appearance: none;
+}
+
+.row {
+    display: flex;
+}
+
+.column {
+    flex: 50%;
 }

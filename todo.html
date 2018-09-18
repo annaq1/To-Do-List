@@ -22,11 +22,21 @@
         <div id = "modal-text">
             <h1>Task</h1>
             <h3>Title</h3>
-            <input type = "text"></input>
-            <h3> Description</h3>
-            <input type = "text"></input>
-            <h3> Due Date</h3>
-            <input type = "date"></input><br>
+            <input class = "t" type = "text"></input>
+            <h3>Description</h3>
+            <input class = "t" type = "text"></input>
+            <h3>Due Date</h3>
+            <input class = "t" type = "date"></input><br>
+            <div class = "row">
+                <div class = "column">
+                    <h3>Task Color</h3>
+                    <input value = "#979595" class = "color-wheel" type = "color"></input>
+                </div>
+                <div class = "column">
+                    <h3>Font Color</h3>
+                   <input class = "color-wheel" type = "color"></input>
+                </div>
+            </div>
             <button id = "enter" onclick = "enter()">Enter</button>
         </div>
     </div>

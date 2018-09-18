@@ -39,6 +39,12 @@ function getTexts(task)
         date.textContent = "";
     }
     task.appendChild(date);
+
+    var back_color = textArray[3].value;
+    task.style.backgroundColor = back_color;
+
+    var font_color = textArray[4].value;
+    task.style.color = font_color;
 }
 
 /* creates removal button and adds to task */
@@ -86,8 +92,12 @@ function enter()
     addTask();
     closeModal();
     var x = document.getElementsByTagName("input");
-    for (var i = 0; i < x.length; ++i)
+    for (var i = 0; i < x.length - 2; ++i)
     {
         x[i].value = "";
     }
+    /* resets color value: decide if want to do or not
+    x[3].value = "#979595";
+    x[4].value = "#000000";
+    */
 }
