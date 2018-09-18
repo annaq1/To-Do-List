@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang = "en">
+
+<head>
+    <meta charset = "utf-8">
+    <title>To-Do List</title>
+    <link rel = "stylesheet" href = "todo.css">
+    <link rel = "stylesheet" href = "modal.css">
+    <script type = "text/javascript" src = "todo.js"></script>
+</head>
+
+<body>
+
+<!-- Button -->
+<button id = "add" onclick = "openModal()" type = "button">Add Task</button>
+
+<!-- Popup form element -->
+<div class = "modal" id = "myModal">
+
+    <div class = "modal-content">
+        <span onclick = "closeModal()" class = "close">&times;</span>
+        <div id = "modal-text">
+            <h1>Task</h1>
+            <h3>Title</h3>
+            <input type = "text"></input>
+            <h3> Description</h3>
+            <input type = "text"></input>
+            <h3> Due Date</h3>
+            <input type = "date"></input><br>
+            <button id = "enter" onclick = "enter()">Enter</button>
+        </div>
+    </div>
+
+</div>
+
+
+</body>
+
+</html>
