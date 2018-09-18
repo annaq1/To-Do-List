@@ -3,13 +3,42 @@
 function addTask()
 {
     var task = document.createElement("div");
-    var text = document.createTextNode("Task");
-    task.appendChild(text);
+    getTexts(task);
     addRemoveButton(task);
     task.classList.add("todo");
 
     var body = document.getElementsByTagName("body");
     body[0].appendChild(task);
+}
+
+function getTexts(task)
+{
+    var textArray = document.getElementsByTagName("input");
+
+    var header = document.createElement("header");
+    var h4 = document.createElement("h4");
+    h4.classList.add("head");
+    h4.textContent = textArray[0].value;
+    header.appendChild(h4);
+    task.appendChild(header);
+
+    var descrip = document.createElement("p");
+    descrip.classList.add("descrip");
+    descrip.textContent = textArray[1].value;
+    task.appendChild(descrip);
+
+    var date = document.createElement("p");
+    if (textArray[2].value != "")
+    {
+        date.classList.add("date")
+        var dText = textArray[2].value.split("-");
+        var str = dText[1] + "/" + dText[2] + "/" + dText[0];
+        date.textContent = str;
+    }
+    else{
+        date.textContent = "";
+    }
+    task.appendChild(date);
 }
 
 /* creates removal button and adds to task */
@@ -56,4 +85,9 @@ function enter()
 {
     addTask();
     closeModal();
+    var x = document.getElementsByTagName("input");
+    for (var i = 0; i < x.length; ++i)
+    {
+        x[i].value = "";
+    }
 }
